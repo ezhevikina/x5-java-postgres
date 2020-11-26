@@ -1,5 +1,5 @@
 -- Вывести общее количество результатов
-SELECT * FROM exam_results;
+SELECT COUNT(*) FROM exam_results;
 
 -- Найти средний показатель финального результата для всех участников
 SELECT AVG(result) FROM exam_results;
@@ -29,7 +29,7 @@ ORDER BY year;
 -- Найти результаты для всех людей, которых зовут Олег или их полное имя длиннее 20 символов,
 -- отсортировав по возврасту: самые молодые вверху
 SELECT result FROM exam_results
-WHERE fullname LIKE '%Олег%'
+WHERE fullname LIKE 'Олег %'
 OR LENGTH(fullname) > 20
 ORDER BY birthday DESC;
 
